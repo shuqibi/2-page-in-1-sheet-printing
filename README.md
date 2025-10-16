@@ -12,10 +12,20 @@ Here is a before-and-after comparison showing how a standard academic paper is t
 
 ![Example Output](example.png)
 
-*(To create this image, take a screenshot of your original PDF next to the output from this script and save it as `example.png` in this repository.)*
-
 
 ### Example Command
 
 ```bash
 python pdf.py input.pdf output.pdf --crop 8 --x_offset -43 --y_offset -80 --gutter_bias 1.2
+```
+
+
+### Command Explained
+
+1, Calculate a base horizontal crop of 8%.
+
+2, For odd pages, it will crop 9.6% (8% * 1.2) from the right side and only 6.4% (8% * (2.0 - 1.2)) from the left side.
+
+3, For even pages, it will do the reverse: crop 9.6% from the left and 6.4% from the right.
+
+4, The result is that the content from both pages will be pushed towards the center, minimizing the blank space between them and allowing each page's content to be scaled up even larger.
