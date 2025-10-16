@@ -16,7 +16,7 @@ Here is a before-and-after comparison showing how a standard academic paper is t
 ### Example Command
 
 ```bash
-python pdf.py input.pdf output.pdf --crop 8 --x_offset -43 --y_offset -80 --gutter_bias 1.2
+python pdf_merger.py input.pdf output.pdf --crop 8 --x_offset -43 --y_offset -80 --gutter_bias 1.2
 ```
 
 
