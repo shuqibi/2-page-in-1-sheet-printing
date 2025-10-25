@@ -23,10 +23,4 @@ python pdf_merger.py input.pdf output.pdf --crop_top 8 --crop_bottom 8 --crop_le
 
 ### Command Explained
 
-1, Calculate a base horizontal crop of 8%.
-
-2, For odd pages, it will crop 9.6% (8% * 1.2) from the right side and only 6.4% (8% * (2.0 - 1.2)) from the left side.
-
-3, For even pages, it will do the reverse: crop 9.6% from the left and 6.4% from the right.
-
-4, The result is that the content from both pages will be pushed towards the center, minimizing the blank space between them and allowing each page's content to be scaled up even larger.
+Crop each edge with different percentage. The combined 2-page pdf is located according to the adjusted center (x,y).
